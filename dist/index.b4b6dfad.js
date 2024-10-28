@@ -27384,7 +27384,7 @@ const MainView = ()=>{
             title: "Ruby Red",
             description: "At first glance, teenager Gwendolyn Shepard seems like a normal schoolgirl next door. In reality, however, she and her family are keeping a secret. A time travel gene is passed down to each generation, which allows the bearer to switch from the present to the past. The The Shepard family is sure that Gwens cousin Charlotte has the gene and is preparing her for her future tasks.",
             genre: "Fantasy",
-            image: "https://en.wikipedia.org/wiki/File:Ruby_Red_(film)_poster.jpg",
+            image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRoGQoSzyUMyrLZq8oalUHV7FHbe16wGdZGcpC1UkbAdncsEh3Z",
             director: "Felix Fuchssteiner"
         },
         {
@@ -27400,12 +27400,12 @@ const MainView = ()=>{
             title: "Pirates of the Carribbean",
             description: "Captain Barbossas pirates, burdened with a curse, take control of pirate captain Jack Sparrows ship, attack the port city of Port Royal and kidnap the beautiful Elizabeth Swann, the governors daughter. The adventurous blacksmith Will Turner, Elizabeths friend since childhood, takes up the pursuit together with the daring Jack Sparrow. Neither of them yet suspects the curse that lies upon the pirate.",
             genre: "Action",
-            image: "https://en.wikipedia.org/wiki/File:Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png",
+            image: "https://cineprog.de/images/Breite_400px_RGB/p_6378.jpg",
             director: "Gore Verbinski"
         }
     ]);
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
-    if (selectedMovie) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MainView, {
+    if (selectedMovie) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieView.MovieView), {
         movie: selectedMovie,
         onBackClick: ()=>setSelectedMovie(null)
     }, void 0, false, {
@@ -27422,11 +27422,11 @@ const MainView = ()=>{
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
-                movie: "movie",
+                movie: movie,
                 onMovieClick: (newSelectedMovie)=>{
-                    setSelectedBook(newSelectedMovie);
+                    setSelectedMovie(newSelectedMovie);
                 }
-            }, "movie.id", false, {
+            }, movie.id, false, {
                 fileName: "src/components/MainView/main-view.jsx",
                 lineNumber: 50,
                 columnNumber: 9
@@ -27437,7 +27437,7 @@ const MainView = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "JC8ClklUUkK0HCre1iCSIxOZ/TE=");
+_s(MainView, "75ZpEC4JW3Wd6OmFrSqI++qFX/8=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
@@ -27447,7 +27447,37 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../MovieCard/movie-card":"dg3Ls","../MovieView/movie-view":"9Uua1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dg3Ls":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../MovieCard/movie-card":"dg3Ls","../MovieView/movie-view":"9Uua1"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"dg3Ls":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2506 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27478,37 +27508,7 @@ $RefreshReg$(_c, "MovieCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"9Uua1":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9Uua1":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5d84 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27636,7 +27636,7 @@ const MovieView = ({ movie, onBackClick })=>{
     }, void 0, true, {
         fileName: "src/components/MovieView/movie-view.jsx",
         lineNumber: 5,
-        columnNumber: 9
+        columnNumber: 5
     }, undefined);
 };
 _c = MovieView;

@@ -1,18 +1,18 @@
 // src/components/MainView/main-view.jsx
 
-import {useState} from "react";
-import {MovieCard} from "../MovieCard/movie-card";
-import {MovieView} from "../MovieView/movie-view";
+import { useState } from "react";
+import { MovieCard } from "../MovieCard/movie-card";
+import { MovieView } from "../MovieView/movie-view";
 
 export const MainView = () => {
-  const[movies, setMovies] = useState ([
+  const [movies, setMovies] = useState ([
      {
       id: 1,
       title: "Ruby Red",
       description: "At first glance, teenager Gwendolyn Shepard seems like a normal schoolgirl next door. In reality, however, she and her family are keeping a secret. A time travel gene is passed down to each generation, which allows the bearer to switch from the present to the past. The The Shepard family is sure that Gwens cousin Charlotte has the gene and is preparing her for her future tasks.",
       genre: "Fantasy",
       image:
-        "https://en.wikipedia.org/wiki/File:Ruby_Red_(film)_poster.jpg",
+        "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRoGQoSzyUMyrLZq8oalUHV7FHbe16wGdZGcpC1UkbAdncsEh3Z",
       director: "Felix Fuchssteiner"
     },
     {
@@ -28,7 +28,7 @@ export const MainView = () => {
       title: "Pirates of the Carribbean",
       description: "Captain Barbossas pirates, burdened with a curse, take control of pirate captain Jack Sparrows ship, attack the port city of Port Royal and kidnap the beautiful Elizabeth Swann, the governors daughter. The adventurous blacksmith Will Turner, Elizabeths friend since childhood, takes up the pursuit together with the daring Jack Sparrow. Neither of them yet suspects the curse that lies upon the pirate.",
       genre: "Action",
-      image: "https://en.wikipedia.org/wiki/File:Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png",
+      image: "https://cineprog.de/images/Breite_400px_RGB/p_6378.jpg",
       director: "Gore Verbinski"
     }
   ]);
@@ -36,7 +36,7 @@ export const MainView = () => {
 const [selectedMovie, setSelectedMovie] = useState(null);
 
     if (selectedMovie) {
-        return (<MainView movie={selectedMovie} onBackClick={() => setSelectedMovie(null)}/>
+        return (<MovieView movie={selectedMovie} onBackClick={() => setSelectedMovie(null)}/>
     );
     }
 
@@ -47,8 +47,8 @@ const [selectedMovie, setSelectedMovie] = useState(null);
   return (
     <div>
       {movies.map((movie) => (
-        <MovieCard key="movie.id" movie="movie" onMovieClick={(newSelectedMovie) => {
-            setSelectedBook(newSelectedMovie);
+        <MovieCard key={movie.id} movie={movie} onMovieClick={(newSelectedMovie) => {
+            setSelectedMovie(newSelectedMovie);
           }}/>
       ))}
     </div>
